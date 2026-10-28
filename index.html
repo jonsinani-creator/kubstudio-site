@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KUB. Architecture Studio</title>
+<meta name="description" content="KUB. Architecture studio in Pristina, Kosovo. Website under construction. Follow us on Instagram @kub.studio.ks">
+<meta property="og:title" content="KUB. Architecture Studio">
+<meta property="og:description" content="Our website is on its way. Follow the work on Instagram @kub.studio.ks">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0a'/%3E%3Crect x='9' y='9' width='14' height='14' fill='%23e8542f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112..125,800..900&family=Inter:wght@400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --fg: #ffffff;
+    --muted: #b5b5b5;
+    --label: #9a9a9a;
+    --accent: #e8542f;
+    --grid: rgba(255,255,255,0.035);
+    --cell: 96px;
+    --pad: 96px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: var(--cell) var(--cell);
+    color: var(--fg);
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  main {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: calc(var(--pad) * 0.85) var(--pad) var(--pad);
+  }
+  .top, .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+  }
+  .label {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 17px;
+    letter-spacing: 0.18em;
+    color: var(--label);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .hero {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-stretch: 125%;
+    font-variation-settings: "wdth" 125;
+    font-size: clamp(120px, 21vw, 420px);
+    line-height: 0.8;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 0.08em;
+  }
+  .dot {
+    display: inline-block;
+    width: 0.19em;
+    height: 0.19em;
+    background: var(--accent);
+    margin-left: 0.06em;
+    transform: translateY(0.02em);
+  }
+  h1 {
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-stretch: 112%;
+    font-variation-settings: "wdth" 112;
+    font-size: clamp(36px, 3.4vw, 64px);
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    margin-bottom: 0.45em;
+  }
+  p {
+    font-size: clamp(18px, 1.45vw, 27px);
+    color: var(--muted);
+    line-height: 1.4;
+  }
+  p a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .2s, border-color .2s;
+  }
+  p a:hover, p a:focus-visible { color: var(--fg); border-color: var(--accent); outline: none; }
+  .br { display: none; }
+
+  @media (max-width: 900px) {
+    :root { --pad: 7vw; --cell: 77px; }
+    main { padding: 56px var(--pad) 64px; }
+    .label { font-size: clamp(9px, 2.6vw, 12px); letter-spacing: 0.12em; }
+    .hero { justify-content: flex-start; }
+    .logo { font-size: 29vw; margin-left: 0.04em; }
+    .bottom { flex-direction: column; align-items: flex-start; }
+    .bottom .label { display: none; }
+    h1 { font-size: clamp(26px, 8vw, 44px); }
+    p { font-size: clamp(14px, 4vw, 18px); }
+    .br { display: inline; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <span class="label">Architecture Studio</span>
+    <span class="label">42.6629° N, 21.1655° E</span>
+  </div>
+
+  <div class="hero">
+    <div class="logo" aria-label="KUB.">KUB<span class="dot" aria-hidden="true"></span></div>
+  </div>
+
+  <div class="bottom">
+    <div>
+      <h1>Under construction.</h1>
+      <p>Our website is on its way.<br class="br"> Follow the work on Instagram
+        <a href="https://www.instagram.com/kub.studio.ks" target="_blank" rel="noopener">@kub.studio.ks</a></p>
+    </div>
+    <span class="label">Pristina, Kosovo</span>
+  </div>
+</main>
+</body>
+</html>
